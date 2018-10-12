@@ -1,2 +1,27 @@
 # tweets-language
-The dataset contains Twitter data and you will iterate over entries in a column to build a dictionary.
+#The dataset contains Twitter data and you will iterate over entries in a column to build a dictionary in which the keys are the name of #languages and the values are the number of tweets in the given language, then return the resulting dictionary from within the function.
+#the file tweets.csv is available.
+import pandas as pd
+df=pd.read_csv('tweets.csv')
+def count_entries(df,col_name)
+    """Return a dictionary with counts of occurrence as value for each key."""
+    #initialize an empty dictionary: langs_count
+    langs_count={}
+    #extract column from DataFrame:col
+    col=df[col_name]
+    for entry in col:
+        if entry in langs_count.keys():
+            langs_count[entry]=langs_count[entry]+1
+        else:
+            langs_count[entry]=1
+     return lang_count   
+#call count_entries():result
+result=count_entries(tweets_df,'lang')
+print(result)
+
+        
+      
+        
+
+
+
